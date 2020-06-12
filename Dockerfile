@@ -1,6 +1,8 @@
 FROM node:12.18.0-alpine
 
-WORKDIR /src/app
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 
@@ -8,6 +10,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8080
+# EXPOSE 8080
 
-CMD ["node", "app.js"]
+CMD ["npm", "start"]
