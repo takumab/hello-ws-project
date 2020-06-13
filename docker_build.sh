@@ -1,0 +1,1 @@
+docker build -t takumab/node-hello-world-app .
