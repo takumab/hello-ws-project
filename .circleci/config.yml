@@ -1,8 +1,7 @@
 version: 2.1
 jobs:
   sandbox:
-    docker:
-      - image: circleci/node:12
+    machine: true
     steps:
       - checkout
       - run: docker build -t takumab/node-hello-world-app .
