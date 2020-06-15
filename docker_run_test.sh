@@ -1,0 +1,1 @@
+docker run takumab/node-hello-world-app npm test 
