@@ -1,7 +1,6 @@
 version: 2.1
 jobs:
   sandbox:
-    machine: true
     steps:
       - checkout
       - run: docker build -t takumab/node-hello-world-app .
