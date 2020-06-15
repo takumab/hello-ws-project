@@ -5,8 +5,8 @@ jobs:
       - image: circleci/node:12
     steps:
       - checkout
-      - run: ./docker_build.sh
-      - run: ./docker_run_test.sh
+      - run: docker build -t takumab/node-hello-world-app .
+      - run: docker run takumab/node-hello-world-app npm test
 
 
 
