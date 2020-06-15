@@ -2,25 +2,25 @@ version: 2.1
 jobs:
   sandbox:
     docker:
-      - image: circleci/node:12
+     - image: circleci/node:12
     steps:
-      - checkout
-      - run:
-          name: Install dependecies
-          command: npm install
+     - checkout
+     - run:
+        name: Install dependecies
+        command: npm install
 
-      - run:
-          name: Run tests
-          command: npm test
+     - run:
+        name: Run tests
+        command: npm test
 
-      - setup_remote_docker:
-          docker_layer_caching: true
-      - run:
-          name: Build Docker image
-          command: docker build -t takumab/node-hello-world-app .
-      - run:
-          name: Run tests
-          command: docker run takumab/node-hello-world-app npm test
+     - setup_remote_docker:
+        docker_layer_caching: true
+     - run:
+        name: Build Docker image
+        command: docker build -t takumab/node-hello-world-app .
+     - run:
+        name: Run tests
+        command: docker run takumab/node-hello-world-app npm test
 
 workflows:
   sandbox:
