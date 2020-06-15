@@ -19,7 +19,7 @@ jobs:
         name: Build Docker image
         command: docker build -t takumab/node-hello-world-app .
      - run:
-        name: Run tests
+        name: Run tests inside Docker container
         command: docker run takumab/node-hello-world-app npm test
 
 workflows:
