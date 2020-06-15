@@ -7,7 +7,7 @@ describe('Hello world', () => {
             .get('/hello-world')
             .expect('Content-Type', /html/)
             .then((response) => {
-                expect(response.text).toEqual("Hello, world!")
+                expect(response.text).toEqual("Hello!")
                 done()
             })
             .catch(done)
