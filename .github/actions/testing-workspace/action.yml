@@ -1,0 +1,7 @@
+name: 'Testing Workspace'
+
+description: 'Tests the workspace.yml file'
+
+runs:
+  main: 'testing-workflows.js'
+  using: 'node16'
