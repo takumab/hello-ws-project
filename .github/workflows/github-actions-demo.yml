@@ -21,3 +21,5 @@ jobs:
 
       - name: Generate workspaces.yml using custom action
         uses: ./.github/actions/testing-workspace
+
+      - run: npm run log:something
