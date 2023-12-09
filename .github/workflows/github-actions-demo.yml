@@ -22,4 +22,15 @@ jobs:
       - name: Generate workspaces.yml using custom action
         uses: ./.github/actions/testing-workspace
 
-      - run: npm run log:something
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .github/workspaces.yml
+          if git diff --staged --quiet; then
+            echo "No changes in workspaces.yml"
+          else
+            git commit -m "Auto-update workspaces.yml"
+            git push
+          fi
+
