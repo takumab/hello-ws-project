@@ -28,9 +28,9 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add .github/workspaces.yml
           if git diff --staged; then
-            echo "No changes in workspaces.yml"
+           git commit -m "Auto-update workspaces.yml"
+           git push
           else
-            git commit -m "Auto-update workspaces.yml"
-            git push
+           echo "No changes in workspaces.yml"
           fi
 
