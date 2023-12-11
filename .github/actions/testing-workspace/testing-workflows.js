@@ -8,5 +8,5 @@ const __dirname = dirname(__filename)
 console.log(`Directory name: ${__dirname}`)
 
 const outputPath = join(__dirname,'..', '..', 'workspaces.yml')
-writeFileSync(outputPath, '@hello-tacKumabA');
+writeFileSync(outputPath, '@hello-tacKumabAC');
 console.log({ outputPath });
